@@ -1,0 +1,31 @@
+<!-- templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <title>Django blog test</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+</head>
+
+<body>
+    <header>
+        <div class="nav-left">
+            <h1><a href="{% url 'upload_home' %}">Django blog</a></h1>
+            <h3><a href="{% url 'home' %}">Home blog</a></h3>
+
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'upload_new' %}">+ New Image Upload</a>
+        </div>
+    </header>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <footer>
+        <p>footer</p>
+        </p>
+</body>
+
+</Doctype!>

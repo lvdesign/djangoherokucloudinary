@@ -1,0 +1,18 @@
+<!-- templates/home.html 
+https://res.cloudinary.com/lvcloud/image/upload/v1603296035/images/django_tyekx5.jpg
+-->
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+{% for uploading in all_posts_list %}
+<li>
+    <img src="https://res.cloudinary.com/lvcloud/image/upload/v1603296035/{{ uploading.image }}"
+        alt="{{ uploading.title }}" />
+    <p><a href="{% url 'image_detail' uploading.pk %}">{{ uploading.title }}</a></p>
+    <p>Author<span> {{uploading.author}}</span></p>
+</li>
+{% endfor %}
+
+{% endblock content %}

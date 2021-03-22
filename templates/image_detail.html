@@ -1,0 +1,12 @@
+<!-- templates/post_detail.html -->
+{% extends 'base.html' %}
+{% block content %}
+<div class="post-entry">
+
+    <h2>{{ mon_image.title }}</h2>
+
+    <img src="https://res.cloudinary.com/lvcloud/image/upload/v1603296035/{{ mon_image.image }}" alt="" />
+    <p>{{ mon_image.body }}</p>
+    <p>Auteur <span>{{ mon_image.author }}</span></p>
+</div>
+{% endblock content %}

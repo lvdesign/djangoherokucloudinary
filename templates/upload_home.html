@@ -1,0 +1,15 @@
+<!-- templates/home.html 
+https://res.cloudinary.com/lvcloud/image/upload/v1603296035/images/django_tyekx5.jpg
+-->
+{% extends 'base.html' %}
+{% block content %}
+
+{% for uploading in mes_images %}
+<div class="post-entry">
+    <h2><a href="{% url 'image_detail' uploading.pk %}">{{ uploading.title }}</a></h2>
+    <p>Image : {{ uploading.image }}</p>
+    <img src="https://res.cloudinary.com/lvcloud/image/upload/v1603296035/{{ uploading.image }}" alt="" />
+</div>
+{% endfor %}
+
+{% endblock content %}
